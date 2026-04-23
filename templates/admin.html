@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>📊 Election Risk Dashboard</h2>
+
+<div class="card">
+    <p><b>Total Votes:</b> {{total}}</p>
+    <p><b>Suspicious Activity:</b> {{suspicious}}</p>
+    <p><b>Integrity Score:</b> {{score}}%</p>
+    <p><b>Risk Level:</b> {{risk}}</p>
+</div>
+
+<div class="card">
+    <h3>⚠ Security Logs</h3>
+    <ul>
+    {% for l in logs %}
+        <li>{{l[0]}}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<a href="/audit">📄 View Audit Report</a>
+
+</body>
+</html>

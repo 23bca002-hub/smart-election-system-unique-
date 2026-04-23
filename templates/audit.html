@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>📊 Smart Election Audit Report</h2>
+
+<div class="card">
+    <p><b>Total Votes:</b> {{total}}</p>
+    <p><b>Suspicious Activities:</b> {{logs|length}}</p>
+</div>
+
+<div class="card">
+    <h3>🗳 Vote Records</h3>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Candidate</th>
+            <th>Time</th>
+            <th>Verification Code</th>
+        </tr>
+        {% for v in votes %}
+        <tr>
+            <td>{{v[0]}}</td>
+            <td>{{v[1]}}</td>
+            <td>{{v[2]}}</td>
+            <td>{{v[5]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="card">
+    <h3>⚠ Security Logs</h3>
+    <ul>
+        {% for l in logs %}
+        <li>{{l[0]}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<a href="/admin">⬅ Back to Dashboard</a>
+
+</body>
+</html>

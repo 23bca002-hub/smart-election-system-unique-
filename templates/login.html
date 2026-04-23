@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Election System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="login-body">
+
+<div class="main-container">
+
+    <!-- LEFT SIDE (INFO PANEL) -->
+    <div class="left-panel">
+        <h1>🗳 Smart Election System</h1>
+        <p>
+            A secure, transparent, and intelligent digital voting platform.
+        </p>
+
+        <div class="features">
+            <p>🔐 Blockchain-Based Vote Security</p>
+            <p>🤖 AI Fraud Detection</p>
+            <p>📊 Real-Time Risk Dashboard</p>
+            <p>🔍 Anonymous Vote Verification</p>
+        </div>
+
+        <p class="tagline">
+            "Ensuring trust, transparency, and security in digital elections."
+        </p>
+    </div>
+
+    <!-- RIGHT SIDE (LOGIN CARD) -->
+    <div class="right-panel">
+        <div class="login-card">
+            <h2>🔐 Login</h2>
+
+            <form method="POST">
+                <input name="username" placeholder="Username" required>
+                <input type="password" placeholder="Password (demo only)">
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="note">Demo system – any username allowed</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

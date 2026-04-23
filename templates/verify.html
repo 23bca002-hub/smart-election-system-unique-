@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔍 Verify Your Vote</h2>
+
+    <form method="POST">
+        <input name="code" placeholder="Enter Verification Code">
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <p style="color:lightgreen;">✅ Vote Verified Successfully</p>
+    {% elif result == None and request.method == 'POST' %}
+        <p style="color:red;">❌ Invalid Code</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

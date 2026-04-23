@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🗳 Cast Your Vote</h2>
+
+    <form method="POST">
+        <select name="candidate" required>
+            <option value="">-- Select Candidate --</option>
+            <option value="Alice">Alice</option>
+            <option value="Bob">Bob</option>
+            <option value="Charlie">Charlie</option>
+        </select>
+
+        <button type="submit">Vote Now</button>
+    </form>
+
+    <br>
+    <a href="/verify">🔍 Verify Vote</a> |
+    <a href="/admin">📊 Dashboard</a>
+</div>
+
+</body>
+</html>

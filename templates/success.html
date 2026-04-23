@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2 style="color:lightgreen;">✅ Vote Recorded Successfully</h2>
+
+    <div class="card">
+        <p>Your Secure Verification Code:</p>
+        <h3 style="letter-spacing:2px;">{{code}}</h3>
+    </div>
+
+    <p style="font-size:14px;">
+        🔒 This code ensures your vote is recorded without revealing your identity.
+    </p>
+
+    <br>
+    <a href="/verify">🔍 Verify Vote</a> |
+    <a href="/vote">🗳 Vote Again</a> |
+    <a href="/admin">📊 Dashboard</a>
+</div>
+
+</body>
+</html>
